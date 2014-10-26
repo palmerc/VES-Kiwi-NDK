@@ -2,7 +2,7 @@
 
 . ./ves-kiwi-variables.sh
 
-LIBVTK_DIR=${SCRIPT_DIR}/libvtk-android
+LIBVTK_DIR=${VES_KIWI_BASE}/libvtk-android
 LIBVTK_FILE=libvtk-android.a
 
 VTK_LIB_DIR=${VES_BUILD_DIR}/CMakeExternals/Install/vtk-android/lib

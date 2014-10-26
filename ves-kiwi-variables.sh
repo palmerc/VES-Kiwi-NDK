@@ -4,7 +4,6 @@ export CXX=/usr/bin/clang++
 export ANDROID_NDK=/usr/local/opt/android-ndk
 export ANDROID_HOME=${HOME}/Development/android-sdk-macosx
 export ANT_EXECUTABLE=`which ant`
-export GNU_AR_EXECUTABLE=/usr/local/bin/gar
 
 ### You probably don't need to modify anything below
 
@@ -21,6 +20,7 @@ export CMAKE_CXX_COMPILER=${CXX}
 export ANDROID_NATIVE_API_LEVEL=14
 export ANDROID_EXECUTABLE=${ANDROID_HOME}/tools/android
 export ADB_EXECUTABLE=${ANDROID_HOME}/platform-tools/adb
+export GNU_AR_EXECUTABLE=`${ANDROID_NDK}/ndk-which ar`
 
 # Directories
 VES_KIWI_BASE=${PWD}/VES-Kiwi
