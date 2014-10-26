@@ -1,0 +1,11 @@
+--- VES-Kiwi/Kiwi-build/AndroidManifest.xml	2014-10-26 17:57:22.000000000 +0100
++++ VES-Kiwi/Kiwi-build/AndroidManifest.xml	2014-10-26 17:57:33.000000000 +0100
+@@ -6,7 +6,7 @@
+         android:versionName="1.0">
+ 
+     <uses-feature android:glEsVersion="0x00020000" />
+-    <uses-sdk android:minSdkVersion="8"
++    <uses-sdk android:minSdkVersion="14"
+               android:targetSdkVersion="18"/>
+ 
+     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
