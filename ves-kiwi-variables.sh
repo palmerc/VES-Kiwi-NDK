@@ -7,7 +7,7 @@ export ANT_EXECUTABLE=`which ant`
 
 ### You probably don't need to modify anything below
 
-set -x 
+#set -x 
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
@@ -31,6 +31,8 @@ VES_ANDROID_SOURCE_DIR=${VES_SOURCE_DIR}/Apps/Android
 KIWI_SOURCE_DIR=${VES_ANDROID_SOURCE_DIR}/Kiwi
 KIWI_BUILD_DIR=${VES_KIWI_BASE}/Kiwi-build
 KIWI_JNI_DIR=${KIWI_BUILD_DIR}/jni
+LIBVTK_DIR=${VES_KIWI_BASE}/vtk-android
+LIBVTK_FILE=libvtk-android.a
 
 TOOLCHAIN=${VES_SOURCE_DIR}/CMake/toolchains/android.toolchain.cmake
 VTK_DIR=${VES_BUILD_DIR}/CMakeExternals/Build/vtk-android
