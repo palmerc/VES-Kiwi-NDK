@@ -1,5 +1,7 @@
 ## Setting up VES-Kiwi for ndk-build
 
+The issue with the cmake VES Superbuild is that it is designed to download any explicitly defined external dependencies and generate a Makefile to build up the base requirements. This is not compatible with the workflow of using the Eclipse IDE and ndk-build. I define that workflow as edit, compile, debug, repeat.
+
 The idea here is to keep the VES and Kiwi code in the `VES/src` directory as source code that the IDE and ndk-build can manage. The VTK stuff will be treated as a black box that the VES/Kiwi code can reference.
 
 Update `ves-kiwi-variables.sh` values to suit your environment. Then run the following commands:
@@ -9,3 +11,4 @@ Update `ves-kiwi-variables.sh` values to suit your environment. Then run the fol
 3. ./libvtk-android-create.sh
 
 If all goes well you should have a `libvtk-android/{lib,include}` directory suitable for acting as your VTK black box.
+
