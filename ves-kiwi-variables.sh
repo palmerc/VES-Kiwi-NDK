@@ -4,10 +4,13 @@ export CXX=/usr/bin/clang++
 export ANDROID_NDK=/usr/local/opt/android-ndk
 export ANDROID_HOME=${HOME}/Development/android-sdk-macosx
 export ANT_EXECUTABLE=`which ant`
+export GNU_AR_EXECUTABLE=/usr/local/bin/gar
 
 ### You probably don't need to modify anything below
 
 set -x 
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Repositories
 VES_OFFICIAL_REPO=git://vtk.org/VES.git
