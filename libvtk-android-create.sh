@@ -5,8 +5,8 @@
 LIBVTK_DIR=${VES_KIWI_BASE}/libvtk-android
 LIBVTK_FILE=libvtk-android.a
 
-VTK_LIB_DIR=${VES_BUILD_DIR}/CMakeExternals/Install/vtk-android/lib
-VTK_INCLUDE_DIR=${VES_BUILD_DIR}/CMakeExternals/Install/vtk-android/include/vtk-6.0
+VTK_LIB_DIR=${VES_INSTALL_DIR}/vtk-android/lib
+VTK_INCLUDE_DIR=${VES_INSTALL_DIR}/vtk-android/include/vtk-6.0
 
 mkdir -p "${LIBVTK_DIR}"/{include,lib}
 cd ${VTK_LIB_DIR}
