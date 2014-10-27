@@ -109,6 +109,7 @@ LOCAL_SRC_FILES := \
    $(LOCAL_PATH)/ves-android/kiwi/vesKiwiWidgetInteractionDelegate.cpp \
    $(LOCAL_PATH)/ves-android/kiwi/vesKiwiWidgetRepresentation.cpp
 LOCAL_STATIC_LIBRARIES := vtk ves shaders
+EXPORT_LOCAL_C_INCLUES += $(LOCAL_PATH)/ves-android/kiwi
 LOCAL_C_INCLUDES := \
    $(LOCAL_PATH)/eigen \
    $(LOCAL_PATH)/ves-android/ves \
@@ -119,7 +120,7 @@ include $(BUILD_STATIC_LIBRARY)
 ### Build libKiwiNative.so
 include $(CLEAR_VARS)
 LOCAL_MODULE := KiwiNative
-
+LOCAL_SRC_FILES := KiwiNative.cpp
 LOCAL_STATIC_LIBRARIES := \
    vtk \
    shaders \
