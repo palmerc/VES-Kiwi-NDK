@@ -121,11 +121,16 @@ include $(BUILD_STATIC_LIBRARY)
 include $(CLEAR_VARS)
 LOCAL_MODULE := KiwiNative
 LOCAL_SRC_FILES := KiwiNative.cpp
+LOCAL_CFLAGS := -w
+LOCAL_C_INCLUDES := \
+   $(LOCAL_PATH)/eigen \
+   $(LOCAL_PATH)/ves-android/ves \
+   $(LOCAL_PATH)/ves-android/kiwi
 LOCAL_STATIC_LIBRARIES := \
    vtk \
    shaders \
    ves \
    kiwi
-LOCAL_LDLIBS += -llog
+LOCAL_LDLIBS += -llog -lGLESv2
 
 include $(BUILD_SHARED_LIBRARY)
