@@ -22,10 +22,6 @@ cp "${VES_BUILD_BUILD_DIR}/ves-android/src/kiwi/vesKiwiOptions.h" "${KIWI_JNI_DI
 
 # Copy shaders out of the build directory.
 cp -R "${VES_BUILD_BUILD_DIR}/ves-android/src/shaders" "${KIWI_JNI_DIR}/ves-android/"
-#rm -rf "${KIWI_JNI_DIR}/ves-android/ves/Testing"
-#rm -rf "${KIWI_JNI_DIR}/ves-android/kiwi/Testing"
-#rm "${KIWI_JNI_DIR}/ves-android/kiwi/vesKiwiTestHelper.h"
-#rm "${KIWI_JNI_DIR}/ves-android/ves/vesTestHelper.h"
 
 # Clean out the cruft
 find ${KIWI_BUILD_DIR} -type f -name "*.cmake" -exec rm {} \;
