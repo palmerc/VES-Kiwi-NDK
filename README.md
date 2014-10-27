@@ -8,7 +8,8 @@ Update `ves-kiwi-variables.sh` values to suit your environment. Then run the fol
 
 1. ./ves-base-android-prepare.sh
 2. ./ves-base-android-compile.sh
-3. ./libvtk-android-create.sh
+3. ./vtk-android-create.sh
+4. ./kiwi-android-project-setup.sh
 
-If all goes well you should have a `libvtk-android/{lib,include}` directory suitable for acting as your VTK black box.
+At this point, we get to the ndk-build stage and start trying to compile. You'll find the results in the `Kiwi-build/` directory.
 
