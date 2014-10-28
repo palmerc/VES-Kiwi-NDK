@@ -4,6 +4,8 @@
 
 # Create the project folder and copy in the source
 mkdir -p "${KIWI_BUILD_DIR}/jni/ves-android"
+mkdir -p "${KIWI_BUILD_DIR}/assets"
+cp -R "${VES_IOS_SOURCE_DIR}/Kiwi/Kiwi/Data/" "${KIWI_BUILD_DIR}/assets"
 cd "${KIWI_BUILD_DIR}"
 cp -R ${VES_ANDROID_SOURCE_DIR}/Kiwi/ .
 
@@ -36,10 +38,11 @@ cp "${ANDROID_MAKEFILES_DIR}/VES.mk" "${KIWI_JNI_DIR}/ves-android/ves/Android.mk
 cp "${ANDROID_MAKEFILES_DIR}/Kiwi.mk" "${KIWI_JNI_DIR}/ves-android/kiwi/Android.mk"
 
 # Clean out the cruft
-find ${KIWI_BUILD_DIR} -type f -name "*.cmake" -exec rm {} \;
-find ${KIWI_BUILD_DIR} -type f -name "CMakeLists.txt" -exec rm {} \;
-find ${KIWI_BUILD_DIR} -type f -name "Makefile" -exec rm {} \;
-find ${KIWI_BUILD_DIR} -type d -name "CMakeFiles" -exec rm -rf {} \;
+cd "${KIWI_BUILD_DIR}"
+find . -type d -name 'CMakeFiles' -print0 | xargs -0 rm -r --
+find . -type f -name '*.cmake' -exec rm {} \;
+find . -type f -name 'CMakeLists.txt' -exec rm {} \;
+find . -type f -name 'Makefile' -exec rm {} \;
 
 cd "${KIWI_JNI_DIR}"
-ndk-build clean all
+#ndk-build clean all
