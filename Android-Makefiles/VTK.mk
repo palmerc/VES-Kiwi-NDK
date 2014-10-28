@@ -4,7 +4,7 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 LOCAL_MODULE := vtk
 LOCAL_EXPORT_C_INCLUDES += $(LOCAL_PATH)/include
-LOCAL_SRC_FILES := $(LOCAL_PATH)/lib/libvtk-android.a
+LOCAL_SRC_FILES := lib/libvtk-android.a
 include $(PREBUILT_STATIC_LIBRARY)
 
 LOCAL_PATH := $(INNER_SAVED_LOCAL_PATH)

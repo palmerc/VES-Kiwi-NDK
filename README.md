@@ -22,4 +22,11 @@ Build process:
 
 At this point, we get to the ndk-build stage and start trying to compile. You'll find the results in the `Kiwi-build/` directory.
 
-You can import the `Kiwi-build/` existing project into Eclipse and it should even be importable into Android studio and gradle. I won't get this into gradle until Android Studio can support debugging the NDK though.
+You can import the `Kiwi-build/` existing project into Eclipse and it should even be importable into Android studio and gradle. I won't get this into gradle until Android Studio can support debugging the NDK though. Within Eclipse `ndk-build` will NOT automatically be called unless you have installed the Android Native Development Tools plugin and configured it.
+
+### Eclipse Requirements
+
+    * Android Native Development Tools plugin
+    * NDK path specified
+    * Add NDK support to the project by right-clicking the project
+    * Setup Debug Configuration based upon Android Native Application template
