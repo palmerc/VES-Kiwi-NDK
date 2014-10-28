@@ -4,8 +4,17 @@ The issue with the cmake VES Superbuild is that it is designed to download any e
 
 The idea here is to keep the VES and Kiwi code in the `VES/src` directory as source code that the IDE and ndk-build can manage. The VTK stuff will be treated as a black box that the VES/Kiwi code can reference.
 
-Update `ves-kiwi-variables.sh` values to suit your environment. Then run the following commands:
+The bash scripts serve to document the construction of an NDK compatible project using the VES-Kiwi source code on a Mac targeting Android.
 
+   * Built on Yosemite
+   * Cmake 3.0.2 (Installed via Brew)
+   * Android NDK r9d (Installed via Brew)
+   * Ant 1.9.4 (Installed via Brew)
+   * Python 2.7.8 (Installed via Brew)
+
+Build process:
+
+1. Update `ves-kiwi-variables.sh`
 1. `./ves-base-android-prepare.sh`
 2. `./ves-base-android-compile.sh`
 3. `./vtk-android-create.sh`
