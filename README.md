@@ -24,6 +24,8 @@ At this point, we get to the ndk-build stage and start trying to compile. You'll
 
 You can import the `Kiwi-build/` existing project into Eclipse and it should even be importable into Android studio and gradle. I won't get this into gradle until Android Studio can support debugging the NDK though. Within Eclipse `ndk-build` will NOT automatically be called unless you have installed the Android Native Development Tools plugin and configured it.
 
+It should be pointed out that this will limit your testing to on-the-device (ARM) because VTK has been cross-compiled to an ARM binary. This should be too big of a deal since that isn't exactly unusual for Android development, but it could be overcome by generating a series of different binaries for the different targets. Feel free to help about in this regard
+
 ### Eclipse Requirements
 
     * Android Native Development Tools plugin
