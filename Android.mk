@@ -121,7 +121,7 @@ include $(BUILD_STATIC_LIBRARY)
 include $(CLEAR_VARS)
 LOCAL_MODULE := KiwiNative
 LOCAL_SRC_FILES := KiwiNative.cpp
-LOCAL_CFLAGS := -w
+LOCAL_CFLAGS := -Wno-write-strings -Wno-psabi
 LOCAL_C_INCLUDES := \
    $(LOCAL_PATH)/eigen \
    $(LOCAL_PATH)/ves-android/ves \
