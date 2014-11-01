@@ -3,6 +3,8 @@ export CC=/usr/bin/clang
 export CXX=/usr/bin/clang++
 export ANDROID_NDK=/usr/local/opt/android-ndk
 export ANDROID_HOME=${HOME}/Development/android-sdk-macosx
+#export ANDROID_ABIS=('armeabi-v7a' 'armeabi' 'armeabi-v7a with NEON' 'armeabi-v7a with VFPV3' 'armeabi-v6 with VFP' 'x86' 'mips')
+export ANDROID_ABIS=('x86')
 export ANT_EXECUTABLE=`which ant`
 
 ### You probably don't need to modify anything below
